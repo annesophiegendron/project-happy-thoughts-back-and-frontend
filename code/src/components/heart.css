@@ -1,0 +1,21 @@
+.heartButton {
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  margin: 7px;
+  outline: none;
+  background-color: #F2B3B9;
+  transition: transform 1s;
+}
+
+.heartButton:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transform: scale(1.1);
+
+}
+
+.heartButton span {
+  font-size: 14px;
+  padding-left: 3px;
+}

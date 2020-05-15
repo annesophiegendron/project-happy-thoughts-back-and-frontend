@@ -1,0 +1,31 @@
+.cardContainer {
+  height: 100%;
+  width: 380px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  border: solid 1px #BFBFBF;
+  background: #fefcff;
+  box-shadow:  5px 5px 0px #bfbdbf, 
+               -5px -5px 0px #ffffff;
+}
+
+.cardContainer p {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 14px;
+  text-align: left;
+  padding: 7px;
+}
+
+.postedTime span {
+  color: grey;
+  float: right;
+  font-size: 12px;
+}
+
+.heartTime {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
