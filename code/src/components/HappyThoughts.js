@@ -5,12 +5,13 @@ import './happyThoughts.css';
 
 // This component displays the list of posted messages
 export const HappyThoughts = (props) => {
-  const { message, hearts, createdAt } = props.thought;
+  const { message, hearts, createdAt, name } = props.thought;
 
   return (
     <div className="cardContainer">
       <div>
-        <p>{message}</p>
+        <p className="userName">{name}</p>
+        <p className="userMessage">{message}</p>
       </div>
       <div className="heartTime">
         <Heart hearts={hearts}

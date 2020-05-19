@@ -4,15 +4,16 @@ import './form.css';
 // This component sets: 1. Text area input (+ message lenght conditions) / 2. Submit button / 3. Function to handle the message submit
 
 export const Form = (props) => {
-  const MESSAGES_URL = 'https://technigo-thoughts.herokuapp.com/';
+  const MESSAGES_URL = 'https://happythoughts-api-annesophie.herokuapp.com/';
   const [message, setMessage] = useState("");
+  const [name, setName] = useState("")
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
     fetch(MESSAGES_URL, {
       method: 'POST',
-      body: JSON.stringify({ message }),
+      body: JSON.stringify({ message, name }),
       headers: { 'Content-Type': 'application/json' }
     })
       .then(() => {
@@ -34,6 +35,14 @@ export const Form = (props) => {
       <div className="text-length">
         <p className={message.length < 5 || message.length > 140 ? "red" : "green"}>{message.length}</p><p>/140</p>
       </div>
+      <p>Who are you?</p>
+      <textarea
+        value={name}
+        placeholder="Type your name here or remain anonymous..."
+        autoFocus
+        rows="1"
+        onChange={(event) => { setName(event.target.value) }}>
+      </textarea>
       <div>
         <button className="submitButton" type="submit" onClick={handleSubmit} disabled={message.length < 5 || message.length > 140 ? true : false}>
           <span role="img" aria-label="white heart">🤍</span>

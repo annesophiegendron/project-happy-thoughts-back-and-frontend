@@ -5,7 +5,7 @@ import './app.css';
 
 export const App = () => {
   const [thoughts, setThoughts] = useState([]);
-  const MESSAGES_URL = 'https://technigo-thoughts.herokuapp.com/';
+  const MESSAGES_URL = 'https://happythoughts-api-annesophie.herokuapp.com/';
 
   useEffect(() => {
     fetch(MESSAGES_URL)

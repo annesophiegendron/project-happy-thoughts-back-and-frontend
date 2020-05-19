@@ -9,7 +9,7 @@ export const Heart = (props) => {
   };
 
   const likeClick = () => {
-    fetch(`https://technigo-thoughts.herokuapp.com/${props.id}/like`, {
+    fetch(`https://happythoughts-api-annesophie.herokuapp.com/${props.id}/like`, {
       method: 'POST',
       body: "",
       headers: { "Content-Type": "application/json" }
