@@ -21,6 +21,6 @@ export const HappyThoughts = (props) => {
           <span> {moment(createdAt).fromNow()} </span>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
