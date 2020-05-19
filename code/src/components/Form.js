@@ -29,6 +29,7 @@ export const Form = (props) => {
         value={message}
         placeholder="Type your happy thought here..."
         autoFocus
+        required
         rows="4"
         onChange={(event) => { setMessage(event.target.value) }}>
       </textarea>
@@ -38,8 +39,7 @@ export const Form = (props) => {
       <p>Who are you?</p>
       <textarea
         value={name}
-        placeholder="Type your name here or remain anonymous..."
-        autoFocus
+        placeholder="Type your name here..."
         rows="1"
         onChange={(event) => { setName(event.target.value) }}>
       </textarea>
