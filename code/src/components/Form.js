@@ -24,7 +24,7 @@ export const Form = (props) => {
 
   return (
     <form className="formContainer">
-      <p>What's making you happy right now?</p>
+      <p>What's making you happy right now? (required)</p>
       <textarea
         value={message}
         placeholder="Type your happy thought here..."
@@ -36,7 +36,7 @@ export const Form = (props) => {
       <div className="text-length">
         <p className={message.length < 5 || message.length > 140 ? "red" : "green"}>{message.length}</p><p>/140</p>
       </div>
-      <p>Who are you?</p>
+      <p>Who are you? (required)</p>
       <textarea
         value={name}
         placeholder="Type your name here..."
